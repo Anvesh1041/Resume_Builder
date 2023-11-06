@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 100px auto;
+        }
+
+        .box {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-control {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .login-button {
+            background-color: #2F855A;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #006666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <form action="/" method="get">
+                <div class="form-control">
+                    <label>Username: </label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" onclick="myalert()" id="loginButton">Login</button>
+                
+            </form>
+        </div>
+    </div>
+    <script>
+        function myalert() {
+            var usernameInput = document.getElementById("username").value;
+            var passwordInput = document.getElementById("password").value;
+    
+            if (usernameInput.trim() === "" || passwordInput.trim() === "") {
+               
+
+                window.alert("Please enter a username and password.");
+            } else {
+                // if(passwordInput=="Nishiket@64")
+                window.alert("Login Successful!");
+            }
+        }
+    </script>
+    <!-- <script>
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const loginButton = document.getElementById('loginButton');
+
+        loginButton.addEventListener('click', () => {
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            // Log the username and password to the console
+            console.log('Username:', username);
+            console.log('Password:', password);
+        });
+    </script> -->
+</body>
+
+</html>
+
+
+
+
+
+
+
